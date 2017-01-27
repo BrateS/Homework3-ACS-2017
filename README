@@ -1,0 +1,40 @@
+Stilul de lucru este similar cu stilul de la tema2.
+Am folosit acelasi struct cu 3 unsigned chars pt pixel.
+init_img:
+Citeste din bmp_file cele 2 header-e si imaginea propriu-zisa.(intoarsa si
+in format bgr) pixel cu pixel.
+alloc_img:
+Aloca dinamic o imagine cu dimensiunile width*height.
+free_img:
+Elibereaza memoria alocata anterior.
+write_bmp:
+Scrie cele 2 header-e in fisierul specificat ca argument si dupa imaginea.
+process_raw_img:
+Intoarce imaginea si aduce pixelii in formatul rgb.
+black_white_img:
+Returneaza imaginea formata dupa formula specificata.
+apply_filter_img:
+Verifica pentru fiecare pixel existenta vecinilor si aduna intr-o variabila
+suma produselor obtinute cu inmultirea matricei.
+apply_filters:
+Scrie cele 3 imagini obtinute cu filtrele din enunt.
+pixel_within_threshold:
+Verifica daca cele 3 valorile 
+ale pixelului daca sunt in limita threshold-ului.
+read_bin:
+Lucreaza cu imaginea din formatul din bin si dupa o inverseaza pentru bmp.
+In for-uri if-ul verifica daca i-ul ori j-ul au trecut de valorile citite
+anterior si atunci citeste urmatoarele valori.
+get/free_matrix:
+Aloca/elibereaza o matrice de unsigned char.
+write_bin:
+Lucreaza cu imaginea procesata (cum se vede cand o deschizi) ,citeste 
+si scrie cele 2 header-e.Se face o matrice cu 0-uri care o folosim pentru
+marcarea pixelilor procesati.
+Daca se gaseste un pixel nemarcat este introdus intr-un vector cu pozitii
+(linii si coloane) ,sunt verificati vecinii ,introdusi si ei ulterior 
+in vector daca satisfac conditiilesi sunt verificati toti pixelii 
+pana zona nu mai are pixeli vecini compatibili.
+Border-ul este reprezentat de : pixeli care nu au toti vecinii egali ori
+pixeli care sunt pe margine.
+
